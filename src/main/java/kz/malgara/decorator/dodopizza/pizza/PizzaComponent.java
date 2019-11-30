@@ -1,6 +1,6 @@
-package kz.malgara.decorator.dodopizza;
+package kz.malgara.decorator.dodopizza.pizza;
 
-public abstract class Pizza {
+public abstract class PizzaComponent {
     protected String description;
 
     public String getDescription() {

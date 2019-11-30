@@ -1,14 +1,14 @@
 package kz.malgara.decorator;
 
-import kz.malgara.decorator.Cafe.condiment.WithMilk;
-import kz.malgara.decorator.Cafe.condiment.WithSirop;
-import kz.malgara.decorator.Cafe.drink.Americano;
-import kz.malgara.decorator.Cafe.drink.Cappuccino;
-import kz.malgara.decorator.Cafe.drink.Drink;
-import kz.malgara.decorator.Cafe.drink.Espresso;
-import kz.malgara.decorator.dodopizza.Pizza;
-import kz.malgara.decorator.dodopizza.ThickDodoPizza;
-import kz.malgara.decorator.dodopizza.ThinkDodoPizza;
+import kz.malgara.decorator.dodopizza.pizza.PizzaComponent;
+import kz.malgara.decorator.dodopizza.pizza.ThickDodoPizzaComponent;
+import kz.malgara.decorator.starbucks.condiment.Milk;
+import kz.malgara.decorator.starbucks.condiment.ChocolateSyrup;
+import kz.malgara.decorator.starbucks.drink.Americano;
+import kz.malgara.decorator.starbucks.drink.Cappuccino;
+import kz.malgara.decorator.starbucks.drink.DrinkComponent;
+import kz.malgara.decorator.starbucks.drink.Espresso;
+import kz.malgara.decorator.dodopizza.pizza.ThinkDodoPizzaComponent;
 import kz.malgara.decorator.dodopizza.topping.Cheese;
 import kz.malgara.decorator.dodopizza.topping.Olives;
 import kz.malgara.decorator.dodopizza.topping.Pepper;
@@ -27,16 +27,16 @@ public class Client {
     public static void main(String[] args) {
 
         // America (350)
-        Drink americano = new Americano();
+        DrinkComponent americano = new Americano();
         // Cappuccino with milk (500 + 100)
         // and double sirop (+ 50 + 50)
-        Drink cappuccino = new Cappuccino();
-        cappuccino = new WithMilk(cappuccino);
-        cappuccino = new WithSirop(cappuccino);
-        cappuccino = new WithSirop(cappuccino);
+        DrinkComponent cappuccino = new Cappuccino();
+        cappuccino = new Milk(cappuccino);
+        cappuccino = new ChocolateSyrup(cappuccino);
+        cappuccino = new ChocolateSyrup(cappuccino);
         // Espresso with milk (250 + 100)
-        Drink espresso = new Espresso();
-        espresso = new WithMilk(espresso);
+        DrinkComponent espresso = new Espresso();
+        espresso = new Milk(espresso);
 
         print(americano);
         print(cappuccino);
@@ -44,21 +44,21 @@ public class Client {
         System.out.println("\n");
 
         // Thin Dodo (300 + 110)
-        Pizza thinDodo = new ThinkDodoPizza();
+        PizzaComponent thinDodo = new ThinkDodoPizzaComponent();
         thinDodo = new Olives(thinDodo);
         // Thick Dodo (500 + 50 + 130)
-        Pizza thickDodo = new ThickDodoPizza();
+        PizzaComponent thickDodo = new ThickDodoPizzaComponent();
         thickDodo = new Pepper(thickDodo);
         thickDodo = new Cheese(thickDodo);
         print(thinDodo);
         print(thickDodo);
     }
 
-    private static void print(Drink espresso) {
-        System.out.println("Drink: " + espresso.getDescription() + "; price: " + espresso.getCost());
+    private static void print(DrinkComponent espresso) {
+        System.out.println("DrinkComponent: " + espresso.getDescription() + "; price: " + espresso.getCost());
     }
 
-    private static void print(Pizza pizza) {
-        System.out.println("Pizza: " + pizza.getDescription() + "; price: " + pizza.getCost());
+    private static void print(PizzaComponent pizzaComponent) {
+        System.out.println("PizzaComponent: " + pizzaComponent.getDescription() + "; price: " + pizzaComponent.getCost());
     }
 }

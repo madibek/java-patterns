@@ -1,6 +1,6 @@
-package kz.malgara.decorator.Cafe.drink;
+package kz.malgara.decorator.starbucks.drink;
 
-public class Espresso extends Drink {
+public class Espresso extends DrinkComponent {
 
     public Espresso() {
         this.description = "This is an Espresso";

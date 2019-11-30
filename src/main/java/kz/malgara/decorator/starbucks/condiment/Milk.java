@@ -1,12 +1,10 @@
-package kz.malgara.decorator.Cafe.condiment;
+package kz.malgara.decorator.starbucks.condiment;
 
-import kz.malgara.decorator.Cafe.drink.Drink;
+import kz.malgara.decorator.starbucks.drink.DrinkComponent;
 
-public class WithMilk extends Drink {
+public class Milk extends CondimentDecorator {
 
-    private Drink drink;
-
-    public WithMilk(Drink drink) {
+    public Milk(DrinkComponent drink) {
         this.drink = drink;
         this.description = this.drink.getDescription() + ", milk";
     }

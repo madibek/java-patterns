@@ -1,18 +1,16 @@
 package kz.malgara.decorator.dodopizza.topping;
 
-import kz.malgara.decorator.dodopizza.Pizza;
+import kz.malgara.decorator.dodopizza.pizza.PizzaComponent;
 
-public class Olives extends Pizza {
+public class Olives extends ToppingDecorator {
 
-    private Pizza pizza;
-
-    public Olives(Pizza pizza) {
-        this.pizza = pizza;
-        this.description = this.pizza.getDescription() + ", olives";
+    public Olives(PizzaComponent pizzaComponent) {
+        this.pizzaComponent = pizzaComponent;
+        this.description = this.pizzaComponent.getDescription() + ", olives";
     }
 
     @Override
     public int getCost() {
-        return 110 + this.pizza.getCost();
+        return 110 + this.pizzaComponent.getCost();
     }
 }

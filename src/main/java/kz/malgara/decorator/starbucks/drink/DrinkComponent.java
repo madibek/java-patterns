@@ -1,6 +1,6 @@
-package kz.malgara.decorator.Cafe.drink;
+package kz.malgara.decorator.starbucks.drink;
 
-public abstract class Drink {
+public abstract class DrinkComponent {
 
     protected String description;
 
