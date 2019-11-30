@@ -1,6 +1,6 @@
-package kz.malgara.decorator.condiment;
+package kz.malgara.decorator.Cafe.condiment;
 
-import kz.malgara.decorator.drink.Drink;
+import kz.malgara.decorator.Cafe.drink.Drink;
 
 public class WithMilk extends Drink {
 

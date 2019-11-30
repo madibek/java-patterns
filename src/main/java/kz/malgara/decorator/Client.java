@@ -1,11 +1,17 @@
 package kz.malgara.decorator;
 
-import kz.malgara.decorator.condiment.WithMilk;
-import kz.malgara.decorator.condiment.WithSirop;
-import kz.malgara.decorator.drink.Americano;
-import kz.malgara.decorator.drink.Cappuccino;
-import kz.malgara.decorator.drink.Drink;
-import kz.malgara.decorator.drink.Espresso;
+import kz.malgara.decorator.Cafe.condiment.WithMilk;
+import kz.malgara.decorator.Cafe.condiment.WithSirop;
+import kz.malgara.decorator.Cafe.drink.Americano;
+import kz.malgara.decorator.Cafe.drink.Cappuccino;
+import kz.malgara.decorator.Cafe.drink.Drink;
+import kz.malgara.decorator.Cafe.drink.Espresso;
+import kz.malgara.decorator.dodopizza.Pizza;
+import kz.malgara.decorator.dodopizza.ThickDodoPizza;
+import kz.malgara.decorator.dodopizza.ThinkDodoPizza;
+import kz.malgara.decorator.dodopizza.topping.Cheese;
+import kz.malgara.decorator.dodopizza.topping.Olives;
+import kz.malgara.decorator.dodopizza.topping.Pepper;
 
 public class Client {
 
@@ -32,8 +38,27 @@ public class Client {
         Drink espresso = new Espresso();
         espresso = new WithMilk(espresso);
 
-        System.out.println("Drink: " + americano.getDescription() + "; price: " + americano.getCost());
-        System.out.println("Drink: " + cappuccino.getDescription() + "; price: " + cappuccino.getCost());
+        print(americano);
+        print(cappuccino);
+        print(espresso);
+        System.out.println("\n");
+
+        // Thin Dodo (300 + 110)
+        Pizza thinDodo = new ThinkDodoPizza();
+        thinDodo = new Olives(thinDodo);
+        // Thick Dodo (500 + 50 + 130)
+        Pizza thickDodo = new ThickDodoPizza();
+        thickDodo = new Pepper(thickDodo);
+        thickDodo = new Cheese(thickDodo);
+        print(thinDodo);
+        print(thickDodo);
+    }
+
+    private static void print(Drink espresso) {
         System.out.println("Drink: " + espresso.getDescription() + "; price: " + espresso.getCost());
+    }
+
+    private static void print(Pizza pizza) {
+        System.out.println("Pizza: " + pizza.getDescription() + "; price: " + pizza.getCost());
     }
 }

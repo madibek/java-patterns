@@ -1,4 +1,4 @@
-package kz.malgara.decorator.drink;
+package kz.malgara.decorator.Cafe.drink;
 
 public class Americano extends Drink {
 
