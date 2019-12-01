@@ -1,14 +1,14 @@
 package kz.malgara.fatorypattern.store;
 
+import kz.malgara.fatorypattern.factory.ItalianoPizzaFactory;
 import kz.malgara.fatorypattern.product.Pizza;
-import kz.malgara.fatorypattern.factory.DodoPizzaFactory;
 
-public class DodoPizza implements PizzaStore {
+public class ItalianoPizza implements PizzaStore {
 
-    private DodoPizzaFactory factory;
+    private ItalianoPizzaFactory factory;
 
-    public DodoPizza() {
-        this.factory = new DodoPizzaFactory();
+    public ItalianoPizza() {
+        this.factory = new ItalianoPizzaFactory();
     }
 
     @Override

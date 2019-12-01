@@ -5,7 +5,7 @@ import kz.malgara.fatorypattern.product.DodoPizza;
 import kz.malgara.fatorypattern.product.PepperoniPizza;
 import kz.malgara.fatorypattern.product.Pizza;
 
-public class PizzaFactory {
+public class DodoPizzaFactory {
 
     public static final String PIZZA_CHEESE = "cheese";
     public static final String PIZZA_PEPPERONI = "pepperoni";
