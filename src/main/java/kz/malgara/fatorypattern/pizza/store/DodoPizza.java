@@ -1,7 +1,7 @@
-package kz.malgara.fatorypattern.store;
+package kz.malgara.fatorypattern.pizza.store;
 
-import kz.malgara.fatorypattern.product.Pizza;
-import kz.malgara.fatorypattern.factory.DodoPizzaFactory;
+import kz.malgara.fatorypattern.pizza.product.Pizza;
+import kz.malgara.fatorypattern.pizza.factory.DodoPizzaFactory;
 
 public class DodoPizza implements PizzaStore {
 

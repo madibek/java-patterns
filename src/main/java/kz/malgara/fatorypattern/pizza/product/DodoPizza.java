@@ -1,9 +1,9 @@
-package kz.malgara.fatorypattern.product;
+package kz.malgara.fatorypattern.pizza.product;
 
-public class CheesePizza extends Pizza {
+public class DodoPizza extends Pizza {
 
-    public CheesePizza(String name) {
-        this.name = name;
+    public DodoPizza() {
+        this.name = "DODO Pizza";
     }
 
     @Override

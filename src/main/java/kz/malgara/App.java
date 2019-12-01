@@ -1,14 +1,14 @@
 package kz.malgara;
 
-import kz.malgara.fatorypattern.store.DodoPizza;
-import kz.malgara.fatorypattern.product.Pizza;
-import kz.malgara.fatorypattern.store.ItalianoPizza;
-import kz.malgara.fatorypattern.store.PizzaStore;
+import kz.malgara.fatorypattern.pizza.store.DodoPizza;
+import kz.malgara.fatorypattern.pizza.product.Pizza;
+import kz.malgara.fatorypattern.pizza.store.ItalianoPizza;
+import kz.malgara.fatorypattern.pizza.store.PizzaStore;
 
-import static kz.malgara.fatorypattern.factory.DodoPizzaFactory.PIZZA_DODO;
-import static kz.malgara.fatorypattern.factory.DodoPizzaFactory.PIZZA_PEPPERONI;
-import static kz.malgara.fatorypattern.factory.DodoPizzaFactory.PIZZA_CHEESE;
-import static kz.malgara.fatorypattern.factory.ItalianoPizzaFactory.PIZZA_THIN_ITALIANO;
+import static kz.malgara.fatorypattern.pizza.factory.DodoPizzaFactory.PIZZA_DODO;
+import static kz.malgara.fatorypattern.pizza.factory.DodoPizzaFactory.PIZZA_PEPPERONI;
+import static kz.malgara.fatorypattern.pizza.factory.DodoPizzaFactory.PIZZA_CHEESE;
+import static kz.malgara.fatorypattern.pizza.factory.ItalianoPizzaFactory.PIZZA_THIN_ITALIANO;
 
 /**
  * Hello world!

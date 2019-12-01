@@ -1,4 +1,4 @@
-package kz.malgara.fatorypattern.product;
+package kz.malgara.fatorypattern.pizza.product;
 
 public class PepperoniPizza extends Pizza {
 

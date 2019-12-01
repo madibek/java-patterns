@@ -1,7 +1,7 @@
-package kz.malgara.fatorypattern.factory;
+package kz.malgara.fatorypattern.pizza.factory;
 
-import kz.malgara.fatorypattern.product.Pizza;
-import kz.malgara.fatorypattern.product.ThinPizza;
+import kz.malgara.fatorypattern.pizza.product.Pizza;
+import kz.malgara.fatorypattern.pizza.product.ThinPizza;
 
 public class ItalianoPizzaFactory {
 

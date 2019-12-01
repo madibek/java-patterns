@@ -1,9 +1,9 @@
-package kz.malgara.fatorypattern.factory;
+package kz.malgara.fatorypattern.pizza.factory;
 
-import kz.malgara.fatorypattern.product.CheesePizza;
-import kz.malgara.fatorypattern.product.DodoPizza;
-import kz.malgara.fatorypattern.product.PepperoniPizza;
-import kz.malgara.fatorypattern.product.Pizza;
+import kz.malgara.fatorypattern.pizza.product.CheesePizza;
+import kz.malgara.fatorypattern.pizza.product.DodoPizza;
+import kz.malgara.fatorypattern.pizza.product.PepperoniPizza;
+import kz.malgara.fatorypattern.pizza.product.Pizza;
 
 public class DodoPizzaFactory {
 
