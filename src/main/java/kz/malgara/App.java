@@ -1,5 +1,7 @@
 package kz.malgara;
 
+import kz.malgara.fatorypattern.calendar.Calendar;
+import kz.malgara.fatorypattern.calendar.PacificCalendar;
 import kz.malgara.fatorypattern.pizza.store.DodoPizza;
 import kz.malgara.fatorypattern.pizza.product.Pizza;
 import kz.malgara.fatorypattern.pizza.store.ItalianoPizza;
@@ -31,6 +33,9 @@ public class App
         PizzaStore italiano = new ItalianoPizza();
         Pizza italianoPizza = italiano.orderPizza(PIZZA_THIN_ITALIANO);
         System.out.println("PIZZA: " + italianoPizza.getName() + " --- DONE!!!");
+
+        Calendar calendar = new PacificCalendar();
+        calendar.createCalendar();
 
     }
 }
